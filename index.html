@@ -321,7 +321,125 @@
 	}
 
 	var sum = funExp(30,50);
+	var sum1 = funExp(30,70);
 	console.log('the sum of two number is ' + sum );
+	console.log('the sum of two number is ' + sum1 );
+	console.log(sum > sum1);
+
+	//ECMA2015
+	//LET vs CONST vs VAR
+
+	// var myName = "Pallavi naik"
+	// console.log(myName);
+
+	// myName = "Pallavi naik"
+	// console.log(myName);
+
+	// const myName = "Pallavi naik"
+	// console.log(myName);
+
+	// myName = "Pallavi naik"
+	// console.log(myName);
+
+	//var => Function scope
+	//let and const => Block scope
+
+	function biodata(){
+		var myFirstname = "Kyara";//in var we can change data anywhere
+		console.log(myFirstname);
+
+		if(true){
+		var myLastname = "Hariyani";
+		console.log('inner' + myLastname);
+		console.log('inner' + myFirstname);
+		}
+		console.log('innerOuter' + myFirstname);
+
+	} 
+	biodata();
+
+	function biodata(){
+		let myFirstname = "Kyara";//in var we can change data anywhere
+		console.log(myFirstname);
+
+		if(true){
+		let myLastname = "Hariyani";
+		console.log('inner' + myLastname);
+		console.log('inner' + myFirstname);
+		}
+//		console.log('innerOuter' + myLastname);
+
+	} 
+	biodata();
+
+	//Template literals
+	// tableof 12
+
+	for(let num = 1; num <= 10; num++){
+		let tableOf = 12;
+		console.log( `${tableOf} * ${num} = ${tableOf * num} ` );
+	}
+
+	//Default parameter
+
+	function mult(a,b=5){
+		return a*b;
+	}
+
+	console.log(mult(5));
+
+	//Fat arrow function
+	const add = () => `The addition of two numbers are ${(a=5)+(b=10)}` ;
+	console.log(add());
+
+	//Arrays in javascript
+
+	var myFriends = ['Ramesh', 'Suresh'];
+	console.log(myFriends);
+
+	 //Traversal array
+	 var myFriends = ['Ramesh', 'Suresh', 'Arjun'];
+	 console.log(myFriends.length);
+	 console.log(myFriends[myFriends.length - 1]);
+
+	// //check length of elements
+	// console.log(myFriends.length);
+
+	// //we use for loop to navigate
+	 var myFriends = ['Ramesh', 'Suresh', 'Arjun', 'Vinod'];
+
+	for(i = 0; i<myFriends.length; i++){
+	console.log(myFriends[i]);
+	 }
+
+	 //for in loop provides us index number
+	 var myFriends = ['Ramesh', 'Suresh', 'Arjun', 'Vinod'];
+
+	 for(let elements in myFriends){
+	 	console.log(elements);
+	 }
+
+	 //for of
+	 var myFriends = ['Ramesh', 'Suresh', 'Arjun', 'Vinod'];
+
+	 for(let elements of myFriends){
+	 	console.log(elements);
+	 }
+
+	 //for each loop - calls a function for each element in array
+	 var myFriends = ['Ramesh', 'Suresh', 'Arjun', 'Vinod'];
+
+	 myFriends.forEach(function(element, index, array) {
+	 	console.log(element + " index : " + index + " " + array);
+	 });
+
+	 //for each - using fat array function 
+	 //fat arraw function does not support this argument
+
+	 myFriends.forEach((element, index, array) => {
+	 	console.log(element + " index : " + index + " " + array);
+	 });
+
 
 
 </script>
