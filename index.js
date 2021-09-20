@@ -490,35 +490,8 @@
 	 console.log(new Date().toLocaleString());
 
 
-	 //Square root of array
-
-	 let arr = [25, 36, 49, 30, 80];
-	 let arrSqr = arr.map((curElem) => Math.sqrt(curElem));
-	 console.log(arrSqr);
-
 
 </script>
-
-<button class="button_su" onclick="goBack">Go Back</button>
-
-<script>
-	function goBack();
-	window.history.back();
-</script>
-
-<div class="main-div">
-	<div class="chlid-one">
-		<p>Child one</p>
-	</div>
-	<div class="chlid-two">
-		<p>Child two</p>
-	</div>
-	<div class="chlid-three">
-		<p>Child three</p>
-	</div>
-</div>
-
-
 
 
 </body>
